@@ -1,6 +1,7 @@
 FROM alpine
 WORKDIR /mnt
 RUN apk -U add php7 php7-json php7-phar php7-mbstring php7-openssl php7-zlib
+RUN apk -U add php7 php7-json php7-phar php7-mbstring php7-openssl php7-zlib php7-dom
 RUN ln -s /usr/bin/php7 /usr/local/bin/php
 ADD https://getcomposer.org/installer /tmp/composer-setup.php
 RUN php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer \
